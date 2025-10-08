@@ -19,7 +19,7 @@ if __name__ == '__main__':
         #获取视频每一帧的hsv值
         cap_hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
         cap_h,cap_s,cap_v = cv2.split(cap_hsv)
-        # 阈值化处理，提取红色
+        # 阈值化处理，提取黑色
         mask_h = cv2.inRange(cap_h,0, 180)
         mask_s = cv2.inRange(cap_s, 0, 255)
         mask_v = cv2.inRange(cap_v, 0, 60)
